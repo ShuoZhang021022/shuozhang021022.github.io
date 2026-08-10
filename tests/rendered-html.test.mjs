@@ -25,17 +25,29 @@ async function render() {
   );
 }
 
-test("server-renders the personal homepage", async () => {
+test("server-renders the English personal homepage", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<html lang="zh-CN">/i);
-  assert.match(html, /<title>你的名字｜个人主页<\/title>/i);
-  assert.match(html, /研究者 · 开发者 · 终身学习者/);
-  assert.match(html, /精选项目/);
-  assert.match(html, /近期动态/);
+  assert.match(html, /<html lang="en">/i);
+  assert.match(html, /<title>Shuo Zhang \| Personal Homepage<\/title>/i);
+  assert.match(html, /<h1[^>]*>Shuo Zhang<\/h1>/i);
+  assert.match(html, /second-year Ph\.D\. student in the Department of Statistics/i);
+  assert.match(html, /large language models \(LLMs\) and statistics/i);
+  assert.match(html, /University of Science and Technology of China/i);
+  assert.match(html, /<h2>Interests<\/h2>/i);
+  assert.match(html, /particularly post-training/i);
+  assert.match(html, /using reinforcement learning to study LLMs/i);
+  assert.match(html, /engineering practice and human–computer interaction/i);
+  assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
+  assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
+  assert.match(html, /src="\/shuo-zhang\.jpg"/i);
+  assert.doesNotMatch(html, /Scholar|<h2>Contact<\/h2>/i);
+  assert.doesNotMatch(html, /Selected Work|Recent News|Current focus|Open To/);
+  assert.doesNotMatch(html, /Researcher · Developer · Lifelong Learner/);
+  assert.doesNotMatch(html, /Site navigation|class="topbar"|class="english-name"/);
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);

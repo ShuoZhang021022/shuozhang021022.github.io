@@ -19,31 +19,40 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: {
-      default: "你的名字｜个人主页",
-      template: "%s｜你的名字",
+      default: "Shuo Zhang | Personal Homepage",
+      template: "%s | Shuo Zhang",
     },
-    description: "个人简介、研究兴趣、精选项目与近期动态。",
-    keywords: ["个人主页", "作品集", "研究", "项目"],
-    authors: [{ name: "你的名字" }],
+    description:
+      "Second-year Ph.D. student in Statistics at the University of Chicago researching large language models and statistics.",
+    keywords: [
+      "personal homepage",
+      "large language models",
+      "LLM post-training",
+      "reinforcement learning",
+      "human-computer interaction",
+    ],
+    authors: [{ name: "Shuo Zhang" }],
     openGraph: {
       type: "profile",
-      locale: "zh_CN",
-      title: "你的名字｜个人主页",
-      description: "研究者、开发者与终身学习者。",
-      siteName: "你的名字的个人主页",
+      locale: "en_US",
+      title: "Shuo Zhang | Personal Homepage",
+      description:
+        "Second-year Ph.D. student in Statistics at the University of Chicago researching large language models and statistics.",
+      siteName: "Shuo Zhang — Personal Homepage",
       images: [
         {
           url: socialImage,
           width: 1536,
           height: 1024,
-          alt: "你的名字的个人主页",
+          alt: "Shuo Zhang — Personal Homepage",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "你的名字｜个人主页",
-      description: "研究者、开发者与终身学习者。",
+      title: "Shuo Zhang | Personal Homepage",
+      description:
+        "Second-year Ph.D. student in Statistics at the University of Chicago researching large language models and statistics.",
       images: [socialImage],
     },
   };
@@ -55,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
