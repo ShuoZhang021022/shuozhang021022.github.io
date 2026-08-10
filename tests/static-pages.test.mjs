@@ -7,6 +7,8 @@ const pagesRoot = new URL("../github-pages/", import.meta.url);
 test("GitHub Pages artifact contains the complete English homepage", async () => {
   const html = await readFile(new URL("index.html", pagesRoot), "utf8");
   const css = await readFile(new URL("styles.css", pagesRoot), "utf8");
+  const rootHtml = await readFile(new URL("../index.html", pagesRoot), "utf8");
+  const rootCss = await readFile(new URL("../styles.css", pagesRoot), "utf8");
 
   assert.match(html, /<html lang="en">/i);
   assert.match(html, /<title>Shuo Zhang \| Personal Homepage<\/title>/i);
@@ -21,11 +23,17 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
 
   assert.match(css, /background:\s*#fff/i);
   assert.match(css, /@media \(max-width: 680px\)/i);
+  assert.equal(rootHtml, html);
+  assert.equal(rootCss, css);
 
   await Promise.all([
     access(new URL(".nojekyll", pagesRoot)),
     access(new URL("favicon.svg", pagesRoot)),
     access(new URL("og.png", pagesRoot)),
     access(new URL("shuo-zhang.jpg", pagesRoot)),
+    access(new URL("../.nojekyll", pagesRoot)),
+    access(new URL("../favicon.svg", pagesRoot)),
+    access(new URL("../og.png", pagesRoot)),
+    access(new URL("../shuo-zhang.jpg", pagesRoot)),
   ]);
 });

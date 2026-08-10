@@ -1,0 +1,190 @@
+:root {
+  --text: #1b1b1b;
+  --muted: #707070;
+  --line: #e8e8e8;
+  --link: #285ea8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 28px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+
+.page {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 176px;
+  gap: 72px;
+  align-items: center;
+  min-height: 430px;
+  padding: 72px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.summary {
+  max-width: 590px;
+  margin-bottom: 24px;
+  color: #444;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero-links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.portrait {
+  position: relative;
+  width: 176px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid #dedede;
+  background: #fafafa;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 36px;
+  padding: 54px 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 20px;
+}
+
+.content-section h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.section-content {
+  min-width: 0;
+}
+
+.section-content p {
+  margin-bottom: 12px;
+}
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0 46px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #777;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 32px, 560px);
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 24px;
+    min-height: 0;
+    padding: 52px 0;
+  }
+
+  .portrait {
+    width: 112px;
+  }
+
+  .summary {
+    font-size: 16px;
+  }
+
+  .content-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    grid-row: 1;
+    width: 92px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

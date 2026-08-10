@@ -13,5 +13,6 @@ pnpm dev
 ```
 
 The React source lives in `app/`. The static GitHub Pages version lives in
-`github-pages/` and is deployed automatically by
-`.github/workflows/deploy-pages.yml` whenever the `main` branch is updated.
+`github-pages/` and is mirrored at the repository root for compatibility with
+branch-based Pages deployments. `.github/workflows/deploy-pages.yml` also
+supports automatic GitHub Actions deployment from `main` or `master`.
