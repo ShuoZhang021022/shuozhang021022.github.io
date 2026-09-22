@@ -64,10 +64,6 @@ export default function Home() {
           </div>
         </section>
 
-        <footer>
-          <p>© 2026 Shuo Zhang</p>
-          <a href="#home">Back to top</a>
-        </footer>
       </article>
 
       <script
