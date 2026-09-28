@@ -15,6 +15,11 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   assert.match(html, /second-year Ph\.D\. student in the Department of Statistics/i);
   assert.match(html, /<h2>Interests<\/h2>/i);
   assert.match(html, /particularly post-training/i);
+  assert.match(html, /<h2 id="news-title">News<\/h2>/i);
+  assert.match(html, /Local Reward Refinement for Long-Horizon Trajectories/i);
+  assert.match(html, /work focuses on controlled sequential tasks/i);
+  assert.match(html, /github\.com\/ShuoZhang021022\/local-reward-refinement-for-long-horizon-trajectories/i);
+  assert.match(html, /class="news-image-placeholder" aria-hidden="true"/i);
   assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
   assert.match(html, /src="shuo-zhang\.jpg"/i);

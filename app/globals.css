@@ -131,6 +131,36 @@ h1 {
   margin-bottom: 0;
 }
 
+.news-item {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.news-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  background: #f8f8f8;
+}
+
+.news-copy h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.news-copy h3 a {
+  color: inherit;
+}
+
+.news-copy p {
+  color: #444;
+  line-height: 1.7;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -171,6 +201,17 @@ footer a {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .news-image-placeholder {
+    max-width: 320px;
   }
 }
 

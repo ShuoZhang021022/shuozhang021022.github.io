@@ -64,6 +64,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="news" className="content-section news-section" aria-labelledby="news-title">
+          <h2 id="news-title">News</h2>
+          <div className="section-content">
+            <article className="news-item">
+              <div className="news-image-placeholder" aria-hidden="true" />
+              <div className="news-copy">
+                <h3>
+                  <a
+                    href="https://github.com/ShuoZhang021022/local-reward-refinement-for-long-horizon-trajectories"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Local Reward Refinement for Long-Horizon Trajectories
+                  </a>
+                </h3>
+                <p>
+                  I am exploring more precise credit assignment from sparse terminal
+                  outcomes in long-horizon language-agent trajectories. The idea
+                  compares actions at revisited decision states and applies a gated
+                  two-step refinement when first-step credit is ambiguous. Current
+                  work focuses on controlled sequential tasks; longer tool-use and
+                  code-agent trajectories remain future directions.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
       </article>
 
       <script

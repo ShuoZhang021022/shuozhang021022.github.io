@@ -41,6 +41,11 @@ test("server-renders the English personal homepage", async () => {
   assert.match(html, /particularly post-training/i);
   assert.match(html, /using reinforcement learning to study LLMs/i);
   assert.match(html, /engineering practice and human–computer interaction/i);
+  assert.match(html, /<h2[^>]*>News<\/h2>/i);
+  assert.match(html, /Local Reward Refinement for Long-Horizon Trajectories/i);
+  assert.match(html, /work focuses on controlled sequential tasks/i);
+  assert.match(html, /github\.com\/ShuoZhang021022\/local-reward-refinement-for-long-horizon-trajectories/i);
+  assert.match(html, /class="news-image-placeholder" aria-hidden="true"/i);
   assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
   assert.match(html, /src="\/shuo-zhang\.jpg"/i);
