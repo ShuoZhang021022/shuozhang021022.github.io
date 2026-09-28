@@ -100,6 +100,34 @@ export default function Home() {
                 </p>
               </div>
             </article>
+            <article className="news-item news-item--text-only">
+              <div className="news-copy">
+                <h3>
+                  <a href="https://github.com/ShuoZhang021022/harness-grpo-lab" target="_blank" rel="noreferrer">
+                    Learning an LLM Agent&apos;s Harness with GRPO
+                  </a>
+                </h3>
+                <p>
+                  A research prototype using GRPO and LoRA to train an LLM agent
+                  to select and create Python tools for a fixed solver. Real-model
+                  experiments are still pending.
+                </p>
+              </div>
+            </article>
+            <article className="news-item news-item--text-only">
+              <div className="news-copy">
+                <h3>
+                  <a href="https://github.com/ShuoZhang021022/actor-judge-code-repair-3.0" target="_blank" rel="noreferrer">
+                    Passive-Judge Training and Test-Time Actor–Judge Selection for Code Repair
+                  </a>
+                </h3>
+                <p>
+                  A framework for multi-step code repair: a private Judge scores
+                  Actor actions during training and helps select proposals at test
+                  time. GPU experiments are still pending.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 

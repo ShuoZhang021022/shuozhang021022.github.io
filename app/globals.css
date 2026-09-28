@@ -143,6 +143,16 @@ h1 {
   align-items: start;
 }
 
+.news-item + .news-item {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.news-item--text-only {
+  display: block;
+}
+
 .news-image-link {
   display: block;
   min-width: 0;
