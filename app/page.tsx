@@ -100,7 +100,19 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="news-item news-item--text-only">
+            <article className="news-item">
+              <a
+                className="news-image-link"
+                href="/agent-tool-flow.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="news-image"
+                  src="/agent-tool-flow.png"
+                  alt="Agent creates and selects tools from a tool pool to solve a problem"
+                />
+              </a>
               <div className="news-copy">
                 <h3>
                   <a href="https://github.com/ShuoZhang021022/harness-grpo-lab" target="_blank" rel="noreferrer">

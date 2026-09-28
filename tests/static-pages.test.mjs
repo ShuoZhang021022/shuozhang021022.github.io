@@ -24,10 +24,15 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   assert.match(html, /State branching diagram with near-zero advantages/i);
   assert.match(html, /Learning an LLM Agent's Harness with GRPO/i);
   assert.match(html, /github\.com\/ShuoZhang021022\/harness-grpo-lab/i);
+  const harnessArticle = [...html.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)]
+    .map(([article]) => article)
+    .find((article) => article.includes("harness-grpo-lab"));
+  assert.match(harnessArticle ?? "", /src="agent-tool-flow\.png"/i);
+  assert.match(harnessArticle ?? "", /Agent creates and selects tools from a tool pool/i);
   assert.match(html, /Passive-Judge Training and Test-Time Actor–Judge Selection for Code Repair/i);
   assert.match(html, /github\.com\/ShuoZhang021022\/actor-judge-code-repair-3\.0/i);
   const textOnlyNews = [...html.matchAll(/<article class="news-item news-item--text-only">([\s\S]*?)<\/article>/g)];
-  assert.equal(textOnlyNews.length, 2);
+  assert.equal(textOnlyNews.length, 1);
   for (const [, article] of textOnlyNews) assert.doesNotMatch(article, /<img\b/i);
   assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
@@ -46,10 +51,13 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
     access(new URL("og.png", pagesRoot)),
     access(new URL("shuo-zhang.jpg", pagesRoot)),
     access(new URL("state-branch-diagram.png", pagesRoot)),
+    access(new URL("agent-tool-flow.png", pagesRoot)),
     access(new URL("../.nojekyll", pagesRoot)),
     access(new URL("../favicon.svg", pagesRoot)),
     access(new URL("../og.png", pagesRoot)),
     access(new URL("../shuo-zhang.jpg", pagesRoot)),
     access(new URL("../state-branch-diagram.png", pagesRoot)),
+    access(new URL("../agent-tool-flow.png", pagesRoot)),
+    access(new URL("../public/agent-tool-flow.png", pagesRoot)),
   ]);
 });
