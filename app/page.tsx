@@ -126,7 +126,19 @@ export default function Home() {
                 </p>
               </div>
             </article>
-            <article className="news-item news-item--text-only">
+            <article className="news-item">
+              <a
+                className="news-image-link"
+                href="/actor-judge-flow.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="news-image"
+                  src="/actor-judge-flow.png"
+                  alt="Actor and Judge provide inputs that combine into a final decision"
+                />
+              </a>
               <div className="news-copy">
                 <h3>
                   <a href="https://github.com/ShuoZhang021022/actor-judge-code-repair-3.0" target="_blank" rel="noreferrer">
