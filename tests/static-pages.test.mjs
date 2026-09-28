@@ -11,6 +11,7 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   const rootCss = await readFile(new URL("../styles.css", pagesRoot), "utf8");
 
   assert.match(html, /<html lang="en">/i);
+  assert.match(html, /href="styles\.css\?v=20260928-news"/i);
   assert.match(html, /<title>Shuo Zhang \| Personal Homepage<\/title>/i);
   assert.match(html, /second-year Ph\.D\. student in the Department of Statistics/i);
   assert.match(html, /<h2>Interests<\/h2>/i);
