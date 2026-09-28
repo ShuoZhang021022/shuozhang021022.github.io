@@ -129,18 +129,28 @@ h1 {
   margin-bottom: 0;
 }
 
+.news-section {
+  grid-template-columns: 1fr;
+  gap: 26px;
+}
+
 .news-item {
   display: grid;
-  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
+  gap: 34px;
   align-items: start;
 }
 
-.news-image-placeholder {
+.news-image-link {
+  display: block;
+  min-width: 0;
+  cursor: zoom-in;
+}
+
+.news-image {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--line);
-  background: #f8f8f8;
+  height: auto;
 }
 
 .news-copy h3 {
@@ -206,10 +216,6 @@ footer a {
   .news-item {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .news-image-placeholder {
-    max-width: 320px;
   }
 }
 

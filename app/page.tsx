@@ -68,7 +68,18 @@ export default function Home() {
           <h2 id="news-title">News</h2>
           <div className="section-content">
             <article className="news-item">
-              <div className="news-image-placeholder" aria-hidden="true" />
+              <a
+                className="news-image-link"
+                href="/state-branch-diagram.png"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="news-image"
+                  src="/state-branch-diagram.png"
+                  alt="State branching diagram with near-zero advantages and diverging outcomes"
+                />
+              </a>
               <div className="news-copy">
                 <h3>
                   <a

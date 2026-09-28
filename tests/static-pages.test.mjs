@@ -19,7 +19,8 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   assert.match(html, /Local Reward Refinement for Long-Horizon Trajectories/i);
   assert.match(html, /work focuses on controlled sequential tasks/i);
   assert.match(html, /github\.com\/ShuoZhang021022\/local-reward-refinement-for-long-horizon-trajectories/i);
-  assert.match(html, /class="news-image-placeholder" aria-hidden="true"/i);
+  assert.match(html, /src="state-branch-diagram\.png"/i);
+  assert.match(html, /State branching diagram with near-zero advantages/i);
   assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
   assert.match(html, /src="shuo-zhang\.jpg"/i);
@@ -36,9 +37,11 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
     access(new URL("favicon.svg", pagesRoot)),
     access(new URL("og.png", pagesRoot)),
     access(new URL("shuo-zhang.jpg", pagesRoot)),
+    access(new URL("state-branch-diagram.png", pagesRoot)),
     access(new URL("../.nojekyll", pagesRoot)),
     access(new URL("../favicon.svg", pagesRoot)),
     access(new URL("../og.png", pagesRoot)),
     access(new URL("../shuo-zhang.jpg", pagesRoot)),
+    access(new URL("../state-branch-diagram.png", pagesRoot)),
   ]);
 });

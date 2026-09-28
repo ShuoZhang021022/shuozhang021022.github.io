@@ -45,7 +45,8 @@ test("server-renders the English personal homepage", async () => {
   assert.match(html, /Local Reward Refinement for Long-Horizon Trajectories/i);
   assert.match(html, /work focuses on controlled sequential tasks/i);
   assert.match(html, /github\.com\/ShuoZhang021022\/local-reward-refinement-for-long-horizon-trajectories/i);
-  assert.match(html, /class="news-image-placeholder" aria-hidden="true"/i);
+  assert.match(html, /src="\/state-branch-diagram\.png"/i);
+  assert.match(html, /State branching diagram with near-zero advantages/i);
   assert.match(html, /mailto:shuozhang2002@uchciago\.edu/i);
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
   assert.match(html, /src="\/shuo-zhang\.jpg"/i);
