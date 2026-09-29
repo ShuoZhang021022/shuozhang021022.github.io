@@ -179,6 +179,31 @@ h1 {
   line-height: 1.7;
 }
 
+.visitor-stats {
+  width: min(340px, 100%);
+  margin: 0;
+  padding: 32px 0 48px;
+}
+
+.visitor-stats img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visitor-stats figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.visitor-stats figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
