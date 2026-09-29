@@ -11,7 +11,7 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   const rootCss = await readFile(new URL("../styles.css", pagesRoot), "utf8");
 
   assert.match(html, /<html lang="en">/i);
-  assert.match(html, /href="styles\.css\?v=20260929-visitors"/i);
+  assert.match(html, /href="styles\.css\?v=20260928-news"/i);
   assert.match(html, /<title>Shuo Zhang \| Personal Homepage<\/title>/i);
   assert.match(html, /second-year Ph\.D\. student in the Department of Statistics/i);
   assert.match(html, /<h2>Interests<\/h2>/i);
@@ -41,8 +41,6 @@ test("GitHub Pages artifact contains the complete English homepage", async () =>
   assert.match(html, /https:\/\/github\.com\/ShuoZhang021022/i);
   assert.match(html, /src="shuo-zhang\.jpg"/i);
   assert.match(html, /rel="canonical" href="https:\/\/shuozhang021022\.github\.io\/"/i);
-  assert.match(html, /https:\/\/www\.stats4u\.net\/c\/2955247788-31\.png/);
-  assert.match(html, /Visitor locations and views today/);
   assert.doesNotMatch(html, /Selected Work|Recent News|Current Focus|Open To|Scholar|Contact/);
 
   assert.match(css, /background:\s*#fff/i);
