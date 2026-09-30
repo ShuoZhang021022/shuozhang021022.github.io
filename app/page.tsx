@@ -67,6 +67,7 @@ export default function Home() {
               particularly post-training. I am especially interested in using
               reinforcement learning to study LLMs and in exploring methods for
               optimizing them in engineering practice and human–computer interaction.
+              I am always exploring the latest and most popular research directions.
             </p>
           </div>
         </section>
