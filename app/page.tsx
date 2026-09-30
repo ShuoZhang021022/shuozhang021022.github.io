@@ -35,6 +35,13 @@ export default function Home() {
             <div className="hero-links">
               <a href="mailto:shuozhang2002@uchciago.edu">Email</a>
               <a
+                href="https://x.com/ShuoZhang021022"
+                target="_blank"
+                rel="noreferrer"
+              >
+                X
+              </a>
+              <a
                 href="https://github.com/ShuoZhang021022"
                 target="_blank"
                 rel="noreferrer"
