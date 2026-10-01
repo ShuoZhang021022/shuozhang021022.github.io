@@ -128,9 +128,10 @@ export default function Home() {
                   </a>
                 </h3>
                 <p>
-                  A research prototype using GRPO and LoRA to train an LLM agent
-                  to select and create Python tools for a fixed solver. Real-model
-                  experiments are still pending.
+                  Use GRPO and LoRA to train an LLM agent to select and create
+                  Python tools for a fixed solver. Agent not only uses old tools
+                  but make tools when appropriate. Our goal is to find the optimal
+                  strategy for the balance of using and making tools.
                 </p>
               </div>
             </article>
@@ -156,7 +157,8 @@ export default function Home() {
                 <p>
                   A framework for multi-step code repair: a private Judge scores
                   Actor actions during training and helps select proposals at test
-                  time. GPU experiments are still pending.
+                  time. This can helps distill the knowledge of strong judge to
+                  the weak actor. GPU experiments are still pending.
                 </p>
               </div>
             </article>
