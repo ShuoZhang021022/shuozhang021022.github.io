@@ -68,7 +68,6 @@ export default function Home() {
               particularly post-training. I am especially interested in using
               reinforcement learning to study LLMs and in exploring methods for
               optimizing them in engineering practice and human–computer interaction.
-              I am always exploring the latest and most popular research directions.
             </p>
           </div>
         </section>
@@ -167,7 +166,7 @@ export default function Home() {
         <section id="collaboration" className="content-section" aria-labelledby="collaboration-title">
           <h2 id="collaboration-title">Collaboration</h2>
           <div className="section-content">
-            <p>Now I am finding computing resources to support my research. If possible, I would be glad to join your research and contribute to our fantastic ideas. I am ok to meet and work 14 hours every day.</p>
+            <p>Now I am finding computing resources to support my research. If possible, I would be glad to join your research and contribute to our fantastic ideas.</p>
           </div>
         </section>
 
